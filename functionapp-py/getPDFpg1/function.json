@@ -1,0 +1,19 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "fullpdf",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "%INPUT_PATH%{name}.pdf",
+      "connection": "STORAGE_CONN_STR"
+    },
+    {
+      "name": "page1",
+      "type": "blob",
+      "direction": "out",
+      "path": "%OUTPUT_PATH%{name}.pdf",
+      "connection": "STORAGE_CONN_STR"
+    }
+  ]
+}
