@@ -1,0 +1,12 @@
+name: pyfunctions38
+channels:
+- conda-forge
+- defaults
+dependencies:
+- python=3.8
+- pypdf2
+- pip
+- pip:
+  - azure-functions
+
+  
