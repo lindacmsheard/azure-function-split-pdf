@@ -40,11 +40,14 @@ Create storage account
 az storage account create -n $STORAGE_ACCOUNT --sku Standard_LRS
 ```
 
-Make the account key available as an environment variable (optional). Note this uses the cli defaults set earlier, meaning we do not need to specify the resource group for example.
+Make the account key and connecction string available as environment variable by sadding them into the `.env` file. This can be done manually, or by using using the cli to fetch these items and appending lines to the `.env` file. Note this uses the cli defaults set earlier, meaning we do not need to specify the resource group for example.
 ```sh
-echo -e '\r\nSTORAGE_ACCOUNT_KEY='$(az storage account keys list --account-name $STORAGE_ACCOUNT --query [0].value -o tsv) >> .env
-echo -e '\r\nSTORAGE_CONN_STR='$(az storage account show-connection-string --account-name $STORAGE_ACCOUNT -o tsv) >> .env
-
+echo -e '\r\n'\
+STORAGE_ACCOUNT_KEY=\'$(az storage account keys list --account-name $STORAGE_ACCOUNT --query [0].value -o tsv)\''\r\n'\
+STORAGE_CONN_STR=\'$(az storage account show-connection-string --name $STORAGE_ACCOUNT -o tsv)\' >> .env
+```
+Source the new set of environment variables:
+```
 source .env
 ```
 
