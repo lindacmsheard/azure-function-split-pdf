@@ -58,15 +58,9 @@ az storage container create -n documents --account-name $STORAGE_ACCOUNT --accou
 ```
 ### Azure Function App resource
 
-> ℹ️ see also: https://docs.microsoft.com/en-us/azure/azure-functions/scripts/functions-cli-create-serverless
+> see also: https://docs.microsoft.com/en-us/azure/azure-functions/scripts/functions-cli-create-serverless
 
-
-az functionapp create \
-  --name $FUNCTION_APP_NAME \
-  --storage-account $STORAGE_ACCOUNT \
-  --consumption-plan-location $LOCATION \
-  --functions-version 2
-
+```
 az functionapp create \
   --name $FUNCTION_APP_NAME \
   --consumption-plan-location $LOCATION \
@@ -75,7 +69,7 @@ az functionapp create \
   --runtime-version 3.8 \
   --functions-version 3 \
   --os-type linux
-
+```
 
 
 # Cleanup
