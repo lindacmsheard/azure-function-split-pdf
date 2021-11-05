@@ -59,4 +59,4 @@ conda activate pyfunctions38
 ```
 > Tip: if conda is not yet avaialble, see [here](https://gist.github.com/lindacmsheard/928b21764d0fa2c1324804de9e38953e) for a gist on setting up conda.
 
-When running the function locally, ensure that the pyfunctions38 environment is activated in the shell, indicated by `(pyfunctions)` in front of the shell prompt.
+When running the function locally, ensure that the pyfunctions38 environment is activated in the shell, indicated by `(pyfunctions38)` in front of the shell prompt.
