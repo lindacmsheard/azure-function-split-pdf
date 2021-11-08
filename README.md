@@ -114,7 +114,7 @@ While running, changes can be made to the function code, and the function will a
 Stop the function with a keyboard interrupt (`CTRL + C`).
 
 
-## 6. Deploy the python function to the Azure Function App
+### 6. Deploy the python function to the Azure Function App
 
 The `--publish-local-settings` option ensures that the same environment variables as in our `local.settings.json` file are available in the deployed function app. Alternatively, the app settings can be configured and updated via the `Configuration` pane in the Azure Portal once the function is published.
 ```
@@ -125,7 +125,7 @@ Test as before, by uploading a pdf to the input path at `/documents/full/`.
 
 Review the logs of function execution by navigating to `Functions` > `your function` within the Azure Portal function app resource, and selecting the `Monitor` pane to review function invocations. The `Logs` tab on that pane connects to the log stream of the function execution.
 
-## [Optional] Edit the function settings
+### [Optional] 7. Edit the function settings
 
 Navigate to the function app settings on the `Configuration` pane of the Azure Function App in the Azure Portal. 
 
